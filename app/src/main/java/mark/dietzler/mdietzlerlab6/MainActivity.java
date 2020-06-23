@@ -19,13 +19,11 @@ import java.util.Scanner;
 public class MainActivity extends AppCompatActivity {
 
     ArrayList<Manufacturer> manufacturers = new ArrayList<Manufacturer>();
-    //ExpandableListView expandableListView;
     SectionPagerAdapter sectionPagerAdapter = new SectionPagerAdapter(getSupportFragmentManager());
-    //MyListAdapter myListAdapter = new MyListAdapter(this,manufacturers);
     Model currentModel;
     ArrayList<Model> modelArrayList = new ArrayList<Model>();
     ViewPager viewPager;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,15 +61,8 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here
-        int id = item.getItemId();
-        if(id == R.id.action_about) {
-            Toast.makeText(this, "Lab 6, Winter 2019, Mark Dietzler", Toast.LENGTH_SHORT).show();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
+    public void onAbout(MenuItem item) {
+        Toast.makeText(this,"Lab 6, Spring 2020, Mark Dietzler", Toast.LENGTH_SHORT).show();
     }
 
     private boolean parseFile(String fileName) {

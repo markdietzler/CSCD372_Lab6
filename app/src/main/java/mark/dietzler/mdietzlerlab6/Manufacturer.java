@@ -1,9 +1,10 @@
 package mark.dietzler.mdietzlerlab6;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class Manufacturer {
+public class Manufacturer implements Serializable {
 
     String manufacturer;
     ArrayList<Model> models;

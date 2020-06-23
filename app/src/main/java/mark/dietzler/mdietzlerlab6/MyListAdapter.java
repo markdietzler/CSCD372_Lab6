@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import java.util.ArrayList;
 
 class MyListAdapter extends BaseExpandableListAdapter implements View.OnClickListener{
@@ -83,7 +84,7 @@ class MyListAdapter extends BaseExpandableListAdapter implements View.OnClickLis
         imageView = (ImageView)convertView.findViewById(R.id.imageView);
 
         imageView.setTag(R.id.group_num, groupPosition);
-        imageView.setTag(R.id.posn_num, childPosition);
+        imageView.setTag(R.id.position_num, childPosition);
         imageView.setOnClickListener(this);
         return convertView;
     }
@@ -96,7 +97,7 @@ class MyListAdapter extends BaseExpandableListAdapter implements View.OnClickLis
     @Override
     public void onClick(View v) {
         final int gposition = (int) v.getTag(R.id.group_num);
-        final int cposition = (int) v.getTag(R.id.posn_num);
+        final int cposition = (int) v.getTag(R.id.position_num);
         Snackbar.make(v, "Are you sure?", Snackbar.LENGTH_LONG).setAction("DELETE", new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -107,8 +108,4 @@ class MyListAdapter extends BaseExpandableListAdapter implements View.OnClickLis
 
 
     }
-
-
-
-
 }

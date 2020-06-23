@@ -4,6 +4,7 @@
 
     <item
         android:id="@+id/action_about"
+        android:onClick="onAbout"
         android:title="@string/about_string"
         app:showAsAction="never" />
 </menu>
